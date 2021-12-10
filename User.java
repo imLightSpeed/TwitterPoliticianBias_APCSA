@@ -49,5 +49,13 @@ public class User{
     return base+"unaffiliated.";
 
   }
+  public String toString()
+  {
+      String print_tweet= "\nTweets: \n";
+      for (Tweet element : tweets) {
+        print_tweet+="\t"+element+"\n";
+      }
+      return "\nProfile:\n"+first_name +" " + last_name+"\n Total Posts: "+total_posts + print_tweet+"\n Prediction: "+guessParty();
+  }
 }
 
